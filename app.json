@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "BracketBuddy",
-    "slug": "BracketBuddy",
+    "name": "Bracket Buddy",
+    "slug": "bracket-buddy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0b0c0f"
     },
     "ios": {
       "supportsTablet": true
@@ -18,13 +18,19 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0b0c0f"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.gregzaal.bracketbuddy"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e73a1c6f-e4c2-41b6-ad0d-cdc290a23b22"
+      }
     }
   }
 }
