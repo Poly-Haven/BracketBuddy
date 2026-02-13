@@ -2,6 +2,8 @@
 
 Bracket Buddy is a minimalist exposure bracketing helper for HDRI photographers. It calculates a symmetric shutter speed sequence from a selected brightest, middle, or darkest exposure.
 
+https://u.polyhaven.org/Eum/Screen_Recording_20260212_165648_Expo%20Go.mp4
+
 ## Features
 
 - **Scrollable exposure list** - Tap to select any exposure and see the full bracket sequence in three columns (Dark, Mid, Bright)
