@@ -1,6 +1,12 @@
 # Bracket Buddy
 
-Bracket Buddy is a minimalist exposure bracketing helper for HDRI photographers. It calculates a symmetric shutter speed sequence from a selected brightest, middle, or darkest exposure.
+When shooting HDR brackets, you often know what you want your brightest or darkest shutter speed to be, but your camera requires you to start from the middle value for some reason.
+
+Calculating that middle shutter speed in your head is hard, so this app presents a simple scrollable exposure table to show you the bracket sequence's darkest, middle, and brightest shutter speeds.
+
+Depending on your camera's settings and capabilities, you can adjust the sequences and shutter speeds shown to you. So it's slightly more than just a static table ;)
+
+The footer shows the complete sequence of all images.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0e773936-771a-4881-a32c-2687e14576e9" alt="App screenshot" />
@@ -8,25 +14,14 @@ Bracket Buddy is a minimalist exposure bracketing helper for HDRI photographers.
 
 ## Features
 
-- **Scrollable exposure list** - Tap to select any exposure and see the full bracket sequence in three columns (Dark, Mid, Bright)
+- **Scrollable exposure list** - See a summary of the bracket sequence in three columns (Darkest, Mid, Brightest)
 - **Adjustable bracketing** - Configure bracket count (3–11), EV spacing (1–3 stops), and camera shutter speed limits
-- **1/3-stop support** - Toggle between full-stop and third-stop increments with visual distinction
-- **Persistent settings** - All preferences saved locally via AsyncStorage
+- **1/3-stop support** - Toggle between full-stop and third-stop increments
+- **Persistent settings** - Remembers your settings between sessions using local storage
 - **Common presets** - Emoji indicators for typical exposure scenarios:
   - ☀️ Sunny day (1/8000 → 1/2")
   - 🏠 Indoor (1/1000 → 4")
   - 🌚 Night (1/250 → 15")
-
-## How to Use
-
-1. Open the app and scroll to your desired middle exposure
-2. The active row (highlighted with white background) shows the full bracket sequence
-3. Adjust settings via the ⚙️ icon to customize:
-   - Number of exposures
-   - EV step between each exposure
-   - Camera's shutter speed range
-   - 1/3-stop precision (optional)
-4. The footer displays the complete sequence for the active exposure
 
 ----
 
@@ -77,5 +72,5 @@ The build will be compiled in the cloud and a download link provided on completi
 
 - **State Management** - React Context with custom hooks
 - **Persistence** - AsyncStorage for settings
-- **Exposure Math** - Index-based stepping through sorted shutter speed options (no floating-point drift)
+- **Exposure Math** - Index-based stepping through sorted shutter speed options
 - **UI** - React Native ScrollView with dynamic active row detection
