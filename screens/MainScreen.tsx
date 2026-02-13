@@ -198,7 +198,15 @@ export const MainScreen = () => {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerText}>
+        <Pressable style={styles.footerLeft} onPress={() => setSettingsVisible(true)}>
+          <Text style={styles.footerLabel}>
+            {settings.bracketCount}x{settings.evSpacing} EVs
+          </Text>
+          <Text style={styles.footerLabel}>
+            DR:{(settings.bracketCount - 1) * settings.evSpacing}
+          </Text>
+        </Pressable>
+        <Text style={styles.sequenceText}>
           {sequenceLabels.join(' · ')}
         </Text>
       </View>
@@ -297,12 +305,26 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   footer: {
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     paddingBottom: theme.spacing.lg,
+    paddingHorizontal: theme.spacing.xs,
   },
-  footerText: {
+  footerLeft: {
+    flexDirection: 'row',
+    gap: theme.spacing.md,
+    alignItems: 'center',
+  },
+  footerLabel: {
     color: theme.colors.textSecondary,
     fontSize: theme.fontSizes.sm,
-    textAlign: 'center',
+    fontWeight: '600',
+  },
+  sequenceText: {
+    color: theme.colors.textSecondary,
+    fontSize: theme.fontSizes.sm,
+    textAlign: 'right',
+    flex: 1,
   },
 });
